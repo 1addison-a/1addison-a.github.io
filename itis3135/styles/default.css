@@ -1,7 +1,29 @@
 body {
     background-color: darkseagreen;
+    color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+ul {
+    text-align: left;
+    display: inline-block; 
 }
 
 nav > a {
     color:azure;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+a:hover {
+    color: crimson
+}
+
+h2 {
+    text-align: center;
 }
