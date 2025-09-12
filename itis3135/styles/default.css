@@ -9,6 +9,7 @@ body {
 ul {
     text-align: left;
     display: inline-block; 
+    margin: 0 auto;
 }
 
 nav > a {
@@ -26,4 +27,8 @@ a:hover {
 
 h2 {
     text-align: center;
+}
+img {
+    width: 30%;
+    height: 70%;
 }
