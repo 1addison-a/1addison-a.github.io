@@ -3,9 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>""</title>
+    <title>Addison Amadi || Personal Site</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* Embedded CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            max-width: 900px;
+            width: 90%;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            font-family: "Trebuchet MS", sans-serif;
+            color: #00509e;
+        }
+
+        h2 {
+            margin-top: 15px;
+            color: #0077b6;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            text-align: center;
+            border-top: 1px solid #ccc;
+            font-size: 0.95em;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: #00509e;
+            margin: 0 8px;
+        }
+
+        a:hover {
+            color: crimson;
+        }
+    </style>
 </head>
 <body>
-    
+    <header>
+        <h1>Addison Amadi</h1>
+        <nav>
+            <a href="./">Home</a> ||
+            <a href="/itis3135/introduction.html">Introduction</a> ||
+            <a href="/itis3135/contract.html">Contract</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to My Personal Site</h2>
+        <h2>My name is Addison Amadi, and I am a Computer Science student at UNC Charlotte</h2>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="https://webpages.charlotte.edu/aamadi" target="_blank">Charlotte.edu</a>
+            ||
+            <a href="https://github.com/1addison-a" target="_blank">GitHub</a>
+            ||
+            <a href="https://github.com/1addison-a/1addison-a.github.io" target="_blank">GitHub.io</a>
+            ||
+            <a href="https://www.freecodecamp.org/addison-a" target="_blank">FreeCodeCamp</a>
+            ||
+            <a href="https://www.codecademy.com/profiles/1Addisona" target="_blank">Codecademy</a>
+            ||
+            <a href="https://www.linkedin.com/in/addison-amadi-28b992336/" target="_blank">LinkedIn</a>
+        </nav>
+        <p>Designed by Addison Amadi &copy; 2025</p>
+        <div style="display: flex; gap: 10px; align-items: center;">
+            <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
+                <img style="border:0;width:88px;height:31px" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="W3C HTML Validator Badge">
+            </a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
+                <img style="border:0;width:88px;height:31px" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="W3C CSS Validator Badge">
+            </a>
+        </div>
+    </footer>
+
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
 </body>
 </html>
