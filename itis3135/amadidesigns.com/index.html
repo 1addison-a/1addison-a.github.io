@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amadi Designs — Digital Product & Web Studio</title>
+
+  <!-- Coolors palette (saved URL): https://coolors.co/0f1724-0ea5a2-ffd166-ff7b7b-f6f7f9 -->
+  <!-- Replace the above URL with the exact Coolors URL you generated and liked. -->
+
+  <style>
+    /* Reset-ish */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html,body { height: 100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: #f6f7f9; color: #0f1724; line-height: 1.4; }
+
+    /* Layout */
+    header, main, footer { max-width: 1000px; margin: 1.25rem auto; padding: 1.25rem; background: white; border-radius: 12px; box-shadow: 0 6px 18px rgba(15,23,36,0.06); }
+    header { display:flex; align-items:center; gap:1rem; }
+    header img { display:block; width:96px; height:96px; object-fit:contain; border-radius:8px; }
+    header h1 { font-size:1.5rem; letter-spacing: -0.02em; color: #0f1724; }
+
+    /* Tagline beneath brand name (small) */
+    .brand-sub { color: #64748b; font-size:0.9rem; margin-top:0.25rem; }
+
+    main h2 { font-size:1.25rem; color: #0f1724; margin-bottom:0.6rem; }
+    main p { margin-bottom:0.75rem; color: #134e4a; }
+
+    /* Custom list style - nonstandard bullets using pseudo-element */
+    ul.amazing {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+    ul.amazing li {
+      padding-left: 2.2rem;
+      position: relative;
+      background: linear-gradient(90deg, rgba(14,165,162,0.04), transparent);
+      border-left: 4px solid rgba(14,165,162,0.14);
+      border-radius: 6px;
+      padding: 0.7rem 1rem;
+    }
+    ul.amazing li::before {
+      content: "✦"; /* decorative nonstandard marker */
+      position: absolute;
+      left: 0.6rem;
+      top: 0.7rem;
+      font-size: 1rem;
+      color: #0ea5a2;
+      line-height: 1;
+    }
+
+    /* Contact block */
+    .contact {
+      margin-top: 1rem;
+      padding: 1rem;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid rgba(14,165,162,0.08);
+      display: grid;
+      gap: 0.4rem;
+    }
+    .contact .label { font-weight:700; color: #0f1724; }
+    .contact a { color: #0ea5a2; text-decoration: none; }
+    .contact a:focus, .contact a:hover { text-decoration: underline; }
+
+    /* Footer (no 'Designed by' text) */
+    footer { display:flex; justify-content:space-between; align-items:center; gap:1rem; font-size:0.95rem; color:#475569; }
+    .copyright { color: #64748b; }
+    .tagline { font-weight:600; color:#0f1724; }
+
+    /* Responsive */
+    @media (max-width:640px) {
+      header { gap: .6rem; }
+      header img { width:72px; height:72px; }
+      header h1 { font-size:1.15rem; }
+      footer { flex-direction:column; align-items:flex-start; gap:.5rem; }
+    }
+
+    /* Focus / Accessibility */
+    a:focus { outline:3px solid rgba(14,165,162,0.2); outline-offset:3px; }
+  </style>
+</head>
+<body>
+  <header>
+    <!--
+      Place your logo at: amadidesigns.co/images/logo.png
+      Make sure the file is at least the display size or larger (do not upscale).
+      Provide the actual width/height of the image below when you add your resized file.
+    -->
+    <img src="../images/amadidesignslogo.png" alt="Amadi Designs logo" >
+
+    <div>
+      <h1>Amadi Designs</h1>
+      <div class="brand-sub">Digital Product, UX & Front-end Engineering</div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Amadi Designs — Services</h2>
+
+    <p>
+      Amadi Designs is a boutique design and development studio specializing in accessible, performance-first websites and product interfaces.
+      We combine clean visual systems with pragmatic engineering to deliver delightful and usable digital experiences.
+    </p>
+
+    <ul class="amazing" aria-label="Five things that make Amadi Designs great">
+      <li>Human-centered design research that informs measurable product decisions.</li>
+      <li>Performance-first front-end coding — fast, semantic, and responsive.</li>
+      <li>WCAG-conscious accessibility baked into the design process.</li>
+      <li>Iterative prototyping and user testing to reduce risk and accelerate launch.</li>
+      <li>Clear documentation and developer handoffs so teams stay productive.</li>
+    </ul>
+
+    <p style="margin-top:0.9rem;">
+      We love partnering with teams to turn ideas into launch-ready products. Our usual engagement includes discovery, design sprints, prototype validation, and front-end implementation with accessible markup and components.
+    </p>
+
+    <div class="contact" aria-label="Contact information">
+      <div><span class="label">Email</span>: <a href="mailto:hello@amadidesigns.co">hello@amadidesigns.co</a></div>
+      <div><span class="label">Phone</span>: <a href="tel:+11234567890">+1 (123) 456-7890</a></div>
+      <div><span class="label">Address</span>: 420 Creative Way, Suite 210, Charlotte, NC 28223</div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="copyright">© 2025 Amadi Designs</div>
+    <div class="tagline">Crafting clear, fast, and accessible digital experiences</div>
+  </footer>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("validation_link_html").setAttribute("href","https://validator.w3.org/check?uri=" + location.href);
+            document.getElementById("validation_link_css").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+    </script>
+</body>
+</html>
