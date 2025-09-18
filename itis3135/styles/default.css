@@ -2,14 +2,7 @@ body {
     background-color: darkseagreen;
     color: black;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     text-align: center;
-}
-ul {
-    text-align: left;
-    display: inline-block; 
-    margin: 0 auto;
 }
 
 nav > a {
@@ -31,4 +24,20 @@ h2 {
 img {
     width: 30%;
     height: 70%;
+}
+ul {
+    list-style-position: inside;
+}
+main {
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+figure {
+    text-align: center;
+    font-style: italic;
+}
+img {
+    width: 50%;
+    height: 50%;
 }
