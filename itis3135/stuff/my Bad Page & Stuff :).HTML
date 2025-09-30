@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- Absolute link to a stylesheet (intentionally brittle) -->
+<link rel="stylesheet" href="http://example.com/styles/common-styles.css">
+<!-- repeated inline styles will be used throughout the document -->
+</head>
+<body style="background:white; color:black;">
+
+
+<!-- Out-of-order headers (h2 before h1) -->
+<h2 style="font-family: 'Times New Roman', Times, serif; margin-top:5px;">This is an H2 that comes first</h2>
+
+
+<h1 style="font-family: Papyrus, fantasy; margin-bottom:20px;">Now the H1 (too late)</h1>
+
+
+<!-- Huge paragraph with inconsistent margins and a white-on-white low-contrast span -->
+<p style="font-size:60px; margin-left: 5px; margin-right:50px; text-align:center;">This paragraph is HUGE and centered despite being nonsense.
+<span style="background:#f9f9f9; color:#f8f8f8;">low contrast text (you can barely read me)</span>
+</p>
+
+
+<!-- Repeated inline styles instead of using the external stylesheet -->
+<p style="margin:0; margin-left:20px; margin-right:20px; margin-top:20px;">A paragraph with inconsistent margins and repeated inline styles.</p>
+
+
+<!-- Absolute link to a (huge) image but WITHOUT an extension and sized badly to break aspect ratio -->
+<h3 style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">A caption that makes no sense as a heading</h3>
+<img src="../images/63706" alt="really long meaningless image name that keeps going and going and will probably break things because it has no extension" width="400" height="400" style="display:block; margin:10px auto; border:5px solid black;">
+
+
+<!-- Lousy long name printed out (also the image file name is meaningless) -->
+<p style="text-decoration:underline;">this_is_a_really_long_image_name_that_means_nothing_and_will_confuse_everyone_forever</p>
+
+
+<!-- Centered bullet list (bad UX) -->
+<ul style="text-align:center; list-style-position:outside;">
+<li style="display:inline-block; margin:10px 40px;">First bad item</li>
+<li style="display:inline-block; margin:10px 40px;">Second bad item</li>
+<li style="display:inline-block; margin:10px 40px;">Third bad item</li>
+</ul>
+
+
+<!-- Underline things that are not links, leave default colored links alone -->
+<p style="text-decoration:underline;">This is underlined text but not a link.</p>
+<p>Here is a real link (keeps default colors): <a href="https://www.uefa.com/uefanationsleague/teams/players/63706--cristiano-ronaldo/">Example Link to a Large Photo</a></p>
+
+
+<!-- Use black font on white background (explicit), but also put background color on some text -->
+<p style="color:black; background:yellow;">Text on a yellow background (visually noisy).</p>
+
+
+<!-- Use Papyrus, Comic Sans, Times in different places -->
+<div style="font-family: Papyrus, fantasy;">This block uses Papyrus (if available).</div>
+<div style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;">This block uses Comic Sans.</div>
+<div style="font-family: 'Times New Roman', Times, serif;">This block uses Times.</div>
+
+
+<!-- A really big border with each side styled differently -->
+<div style="width:80%; margin:20px auto; padding:20px; border-top:12px solid red; border-right:16px dotted blue; border-bottom:20px double green; border-left:24px dashed purple;">
+<p style="margin:0;">A box with a huge, chaotic border on all four sides.</p>
+</div>
+
+
+<!-- Extra blank lines and trailing spaces intentionally placed below -->
+
+
+<p style="margin-left:10px;">Another paragraph with repeated inline styles. </p>
+
+
+
+<!-- More redundant inline CSS and inconsistent spacing -->
+<p style="margin-left:10px; margin-top:30px; margin-bottom:5px;">Inconsistent spacing above and below this paragraph.</p>
+
+
+
+<p style="text-align:center;">This paragraph is centered for no good reason.</p>
+
+
+
+
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>
