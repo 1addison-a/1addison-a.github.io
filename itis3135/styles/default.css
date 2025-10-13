@@ -1,39 +1,89 @@
+* {
+  box-sizing: border-box;
+}
 body {
     background-color: darkseagreen;
     color: black;
     font-family: Arial, sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-nav > a {
-    color:azure;
+header {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
 }
 
-a {
-    color: darkblue;
-    text-decoration: none;
-}
-
-a:hover {
-    color: crimson
-}
-
-h2 {
+h1, h2 {
     text-align: center;
 }
+
+nav a {
+    color: azure;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: crimson;
+}
+
+main {
+    background-color: darkseagreen;
+    width: 90%;             
+    max-width: 1200px;     
+    margin: 0 auto;         
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 ul {
     list-style-position: inside;
 }
-main {
-    text-align: left;
-    margin-left: 20%;
-    margin-right: 20%;
-}
+
 figure {
     text-align: center;
     font-style: italic;
 }
+
 img {
     width: 50%;
-    height: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* 🖥️ Desktop (default styles already apply above) */
+
+/* 💻 Tablet Screens */
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    body {
+        background-color: darkseagreen;
+    }
+    main {
+        width: 95%;
+    }
+    img {
+        width: 70%;
+    }
+}
+
+/* 📱 Mobile Screens */
+@media screen and (max-width: 600px) {
+    body {
+        background-color: darkseagreen;
+    }
+    main {
+        padding: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 8px 0;
+    }
+    img {
+        width: 90%;
+    }
 }
