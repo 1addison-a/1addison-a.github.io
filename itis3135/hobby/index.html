@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Life: Gym & Soccer</title>
+    <style>
+        /* === Embedded Stylesheet === */
+
+        :root {
+            --primary: #1e90ff;
+            --secondary: #222;
+            --accent: #f4a261;
+            --bg: #f0f8ff;
+            --text: #222;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 2rem;
+            flex: 1;
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .active {
+            display: block;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figcaption {
+            font-style: italic;
+            color: var(--secondary);
+        }
+
+        footer {
+            background-color: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .divider {
+            border: none;
+            border-top: 2px dashed var(--accent);
+            width: 60%;
+            margin: 1.5rem auto;
+        }
+        .location-table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 1rem auto;
+        }
+
+        .location-table th, 
+        .location-table td {
+            border: 1px solid var(--secondary);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .location-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏋️ Active Life: Gym & Soccer ⚽</h1>
+        <nav>
+            <a href="#" onclick="showSection('what')">What</a> ⚡
+            <a href="#" onclick="showSection('who')">Who</a> ⚡
+            <a href="#" onclick="showSection('when')">When</a> ⚡
+            <a href="#" onclick="showSection('where')">Where</a> ⚡
+            <a href="#" onclick="showSection('how')">How</a> ⚡
+            <a href="#" onclick="showSection('why')">Why</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- WHAT Section -->
+        <section id="what" class="active">
+            <h2>What: Fitness and Soccer</h2>
+            <p>Fitness and soccer are my two main passions — one keeps me strong, the other keeps me fast. Training at the gym builds the power and endurance I bring to the soccer field.</p>
+            <figure>
+                <img src="images/premium_photo-1661439604043-c069303164dd.jpeg" alt="Gym workout" width="400">
+                <figcaption><i>“A person lifting weights in a bright, modern gym.”</i></figcaption>
+            </figure>
+        </section>
+
+        <!-- WHO Section -->
+        <section id="who">
+            <h2>Who: About Me</h2>
+            <p>My name is Addison, and I’ve been passionate about sports and fitness since high school. Going to the gym and playing soccer help me stay focused and balanced as a computer science student.</p>
+            <figure>
+                <img src="images/IMG_8115.JPG" alt="Playing soccer" width="600" height="400" loading="lazy">
+                <figcaption><i>“Team soccer picture”</i></figcaption>
+            </figure>
+        </section>
+
+        <!-- WHEN Section -->
+        <section id="when">
+            <h2>When: My Weekly Routine</h2>
+            <ul>
+                <li>🏋️ Gym: Monday, Wednesday, Friday</li>
+                <li>⚽ Soccer: Tuesday, Thursday, Saturday</li>
+                <li>🛌 Rest: Sunday</li>
+            </ul>
+            <p>This balance helps me recover while staying consistent.</p>
+        </section>
+
+        <!-- WHERE Section -->
+        <section id="where">
+            <h2>Where: Favorite Locations</h2>
+            <p>I train at the UNC Charlotte UREC gym and play soccer at nearby community fields.</p>
+            <table class="location-table">
+                <tr><th>Activity</th><th>Location</th></tr>
+                <tr><td>Gym</td><td>UNC Charlotte UREC</td></tr>
+                <tr><td>Soccer</td><td>Northeast Recreational Field Complex</td></tr>
+            </table>
+        </section>
+
+        <!-- HOW Section -->
+        <section id="how">
+            <h2>How: My Training Approach</h2>
+            <p>I focus on consistency, progressive overload in the gym, and sticking to the basics and foundation in soccer.</p>
+            <figure>
+                <img src="images/neymar-1527056761.jpg" alt="Training drills" width="400">
+                <figcaption><i>“Neymar doing cone drills on the field.”</i></figcaption>
+            </figure>
+        </section>
+
+        <!-- WHY Section -->
+        <section id="why">
+            <h2>Why: Motivation</h2>
+            <p>Fitness and soccer keep me healthy, disciplined, and connected to others who share the same passion.</p>
+            <p>Both hobbies also help me manage stress and boost my energy for academics.</p>
+        </section>
+
+        <!-- AI Prompts Section -->
+        <section id="ai">
+            <h2>AI Prompts Used</h2>
+            <ul>
+                <li>“A person lifting weights in a bright, modern gym.”</li>
+                <li>“A soccer player kicking the ball under stadium lights.”</li>
+                <li>“A soccer player doing cone drills on a grass field.”</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Site by <a href="../amadidesigns.com/">Amadi Designs</a></p>
+     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    </footer>
+
+
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('section').forEach((sec) => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+   
+</body>
+</html>
