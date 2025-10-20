@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addison Addison's Agile Antelope | ITSC3135 FCC JC Plan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 90%;
+            line-height: 1.6;
+        }
+
+        header, footer {
+            text-align: center;
+            padding: 5px 0; /* smaller padding */
+            background-color: #00509e;
+            color: white;
+        }
+
+        header h1, header h2, header p {
+            margin: 5px 0; /* reduces header text spacing */
+        }
+
+        a {
+            color: white;            /* makes links white */
+            text-decoration: none;   /* removes underline */
+        }
+
+        a:hover {
+            text-decoration: underline; /* adds subtle hover effect */
+            color: crimson
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            color: #00509e;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            margin-top: 20px;
+        }
+
+        caption {
+            caption-side: top;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 10px;
+            color: #0077b6;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        th {
+            background-color: #0077b6;
+            color: white;
+            text-align: center;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f4f6f8;
+        }
+
+        tfoot {
+            background-color: #dfe8f1;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        section {
+            margin-top: 40px;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+        <h1>FreeCodeCamp Full Stack JavaScript Outline</h1>
+        <table>
+            <caption>FCC JavaScript Curriculum Overview (Fall 2025)</caption>
+            <thead>
+                <tr>
+                    <th>Section</th>
+                    <th>Steps</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Code Editors</td>
+                    <td>5</td>
+                    <td>Introduces the basics of using code editors effectively, including setup, saving files, and running JavaScript locally.</td>
+                </tr>
+                <tr>
+                    <td>Variables and Strings</td>
+                    <td>62</td>
+                    <td>Covers how to declare variables, work with strings, and manipulate text data using common string methods.</td>
+                </tr>
+                <tr>
+                    <td>Booleans and Numbers</td>
+                    <td>37</td>
+                    <td>Explores numeric data types, arithmetic operations, and Boolean logic for controlling program flow.</td>
+                </tr>
+                <tr>
+                    <td>Functions</td>
+                    <td>38</td>
+                    <td>Teaches how to define and call functions, use parameters, and understand scope and return values.</td>
+                </tr>
+                <tr>
+                    <td>Arrays</td>
+                    <td>35</td>
+                    <td>Focuses on creating and manipulating arrays to store and manage collections of data efficiently.</td>
+                </tr>
+                <tr>
+                    <td>Objects</td>
+                    <td>28</td>
+                    <td>Introduces JavaScript objects and key-value pairs, and how to access, modify, and iterate through them.</td>
+                </tr>
+                <tr>
+                    <td>Loops</td>
+                    <td>22</td>
+                    <td>Explains various loop structures such as <code>for</code>, <code>while</code>, and <code>for...of</code> for repetitive tasks.</td>
+                </tr>
+                <tr>
+                    <td>JavaScript Fundamentals Review</td>
+                    <td>30</td>
+                    <td>Summarizes the foundational JavaScript concepts learned so far through hands-on review exercises.</td>
+                </tr>
+                <tr>
+                    <td>Higher Order Functions and Callbacks</td>
+                    <td>37</td>
+                    <td>Introduces callback functions and functional programming principles using methods like <code>map()</code> and <code>filter()</code>.</td>
+                </tr>
+                <tr>
+                    <td>DOM Manipulation and Events</td>
+                    <td>87</td>
+                    <td>Teaches how to interact with the Document Object Model to modify web pages dynamically and handle user input through events.</td>
+                </tr>
+                <tr>
+                    <td>JavaScript and Accessibility</td>
+                    <td>42</td>
+                    <td>Explains how JavaScript impacts accessibility and how to make dynamic content usable for all users.</td>
+                </tr>
+                <tr>
+                    <td>Debugging</td>
+                    <td>8</td>
+                    <td>Shows common debugging strategies and tools for identifying and fixing JavaScript errors efficiently.</td>
+                </tr>
+                <tr>
+                    <td>Basic Regex</td>
+                    <td>47</td>
+                    <td>Introduces regular expressions for pattern matching and validating user input such as emails or phone numbers.</td>
+                </tr>
+                <tr>
+                    <td>Form Validation</td>
+                    <td>103</td>
+                    <td>Teaches client-side form validation using JavaScript to ensure data accuracy and improve user experience.</td>
+                </tr>
+                <tr>
+                    <td>Dates</td>
+                    <td>5</td>
+                    <td>Explains how to work with the JavaScript <code>Date</code> object to manage and format date/time information.</td>
+                </tr>
+                <tr>
+                    <td>Audio and Video Events</td>
+                    <td>55</td>
+                    <td>Explores multimedia controls and events in JavaScript to create interactive audio and video experiences.</td>
+                </tr>
+                <tr>
+                    <td>Maps and Sets</td>
+                    <td>37</td>
+                    <td>Demonstrates how to use the <code>Map</code> and <code>Set</code> data structures for efficient key/value and unique data storage.</td>
+                </tr>
+                <tr>
+                    <td>localStorage and CRUD Operations</td>
+                    <td>78</td>
+                    <td>Teaches how to use localStorage to save data in the browser and perform basic Create, Read, Update, and Delete actions.</td>
+                </tr>
+                <tr>
+                    <td>Classes</td>
+                    <td>68</td>
+                    <td>Introduces object-oriented programming in JavaScript, covering class syntax, inheritance, and constructors.</td>
+                </tr>
+                <tr>
+                    <td>Recursion</td>
+                    <td>112</td>
+                    <td>Explains how recursive functions work, including base cases and call stacks, through practical coding examples.</td>
+                </tr>
+                <tr>
+                    <td>Functional Programming</td>
+                    <td>23</td>
+                    <td>Explores core concepts of functional programming like pure functions and immutability for cleaner, modular code.</td>
+                </tr>
+                <tr>
+                    <td>Asynchronous JavaScript</td>
+                    <td>36</td>
+                    <td>Teaches asynchronous operations using callbacks, promises, and async/await to handle data flow efficiently.</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3">Total: 996 Steps Across 22 Sections</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <section>
+            <h2>Completion Schedule</h2>
+            <p>I, Addison Amadi, intend to finish the FreeCodeCamp Full Stack Developer JavaScript section over the next <strong>6 weeks</strong> according to the following plan:</p>
+            <ul>
+                <li><strong>Week 1:</strong> Code Editors, Variables and Strings</li>
+                <li><strong>Week 2:</strong> Booleans and Numbers, Functions</li>
+                <li><strong>Week 3:</strong> Arrays, Objects, Loops</li>
+                <li><strong>Week 4:</strong> JavaScript Fundamentals Review, Higher Order Functions and Callbacks</li>
+                <li><strong>Week 5:</strong> DOM Manipulation and Events, JavaScript and Accessibility</li>
+                <li><strong>Week 6:</strong> Debugging, Basic Regex, Dates, Audio and Video Events</li>
+            </ul>
+            <p><em>Addison Amadi, 10/13/25</em></p>
+        </section>
+    </main>
+        <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

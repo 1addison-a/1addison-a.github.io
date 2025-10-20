@@ -25,8 +25,11 @@ nav a {
     text-decoration: none;
     margin: 0 10px;
 }
-
-nav a:hover {
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover {
     color: crimson;
 }
 
@@ -55,6 +58,9 @@ img {
     border-radius: 10px;
 }
 
+header nav:nth-of-type(1) {
+  margin-bottom: 20px;
+}
 
 /* 🖥️ Desktop (default styles already apply above) */
 
