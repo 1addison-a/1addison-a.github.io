@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction Form | Addison Amadi</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <style>
+    /* Form-specific styles only */
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 800px;
+      margin: 20px auto;
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .form-section {
+      border-top: 2px solid #ddd;
+      padding-top: 15px;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      margin-bottom: 15px;
+      color: #333;
+      text-align: left;
+    }
+
+    .form-container label {
+      font-weight: bold;
+      margin-top: 10px;
+      color: #555;
+      display: block;
+      text-align: left;
+    }
+
+    .optional::after {
+      content: " (optional)";
+      font-weight: normal;
+      font-style: italic;
+      color: #888;
+    }
+
+    .form-container input, 
+    .form-container textarea, 
+    .form-container select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    .form-container input:required, 
+    .form-container textarea:required {
+      border-left: 3px solid #4CAF50;
+    }
+
+    .course-entry {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      position: relative;
+    }
+
+    .course-entry .course-title {
+      margin-top: 0;
+      color: #333;
+      text-align: left;
+      font-size: 1.17em;
+      font-weight: bold;
+    }
+
+    .remove-course {
+      background-color: #dc3545;
+      color: white;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-top: 10px;
+    }
+
+    .remove-course:hover {
+      background-color: #c82333;
+    }
+
+    .add-course {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .add-course:hover {
+      background-color: #218838;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .form-container button[type="submit"], 
+    .form-container button[type="reset"], 
+    .form-container button[type="button"] {
+      flex: 1;
+      background-color: black;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .form-container button:hover {
+      background-color: crimson;
+    }
+
+    .preview-img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      margin: 10px auto;
+      display: block;
+    }
+
+    /* Result page should match original intro page */
+    #result {
+      /* Uses styles from default.css - no custom styling needed */
+    }
+
+    #result .reset-link {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #result .reset-link a {
+      color: crimson;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    #result .reset-link a:hover {
+      text-decoration: underline;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Ensure h3 in form section is left-aligned */
+    .form-intro {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+
+  <main>
+    <h2>Introduction Form</h2>
+    <h3 class="form-intro">Please submit the form below.</h3>
+
+    <form id="introForm" class="form-container">
+      <!-- Basic Information -->
+      <div class="form-section">
+        <h3 class="section-title">Basic Information</h3>
+        
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" value="Addison" placeholder="Enter your first name" required>
+
+        <label for="middleName" class="optional">Middle Name</label>
+        <input type="text" id="middleName" name="middleName" placeholder="Enter your middle name or initial">
+
+        <label for="nickname" class="optional">Nickname/Preferred Name</label>
+        <input type="text" id="nickname" name="nickname" value="Addy" placeholder="Enter your nickname">
+
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" value="Amadi" placeholder="Enter your last name" required>
+      </div>
+
+      <!-- Acknowledgment -->
+      <div class="form-section">
+        <h3>Acknowledgment</h3>
+        
+        <label for="ackStatement">Acknowledgment Statement</label>
+        <textarea id="ackStatement" name="ackStatement" rows="2" required>I, Addison Amadi, acknowledge that this is my own work and represents my personal introduction.</textarea>
+
+        <label for="ackDate">Acknowledgment Date</label>
+        <input type="text" id="ackDate" name="ackDate" value="2025-10-26" required>
+      </div>
+
+      <!-- Mascot -->
+      <div class="form-section">
+        <h3>Mascot</h3>
+        
+        <label for="mascotAdj">Mascot Adjective</label>
+        <input type="text" id="mascotAdj" name="mascotAdj" value="Agile" placeholder="Enter an adjective" required>
+
+        <label for="mascotAnimal">Mascot Animal</label>
+        <input type="text" id="mascotAnimal" name="mascotAnimal" value="Antelope" placeholder="Enter an animal" required>
+
+        <label for="divider">Divider Symbol</label>
+        <input type="text" id="divider" name="divider" value="||" placeholder="e.g., ~, |, ♥️" required>
+      </div>
+
+      <!-- Picture -->
+      <div class="form-section">
+        <h3>Picture</h3>
+        
+        <img id="previewImg" class="preview-img" src="images/addison.jpg" alt="Preview">
+        
+        <label for="picture">Upload Picture</label>
+        <input type="file" id="picture" name="picture" accept="image/*">
+
+        <label for="caption">Picture Caption</label>
+        <input type="text" id="caption" name="caption" value="Addison Amadi || Agile Antelope" placeholder="Enter caption" required>
+      </div>
+
+      <!-- Personal Statement -->
+      <div class="form-section">
+        <h3>Personal Statement</h3>
+        
+        <label for="personalStatement">Personal Statement</label>
+        <textarea id="personalStatement" name="personalStatement" rows="4" placeholder="Write your personal statement" required>I'm a Computer Science student at UNC Charlotte with a passion for data science and artificial intelligence. I love solving complex problems and building innovative solutions.</textarea>
+      </div>
+
+      <!-- 7 Main Bullets -->
+      <div class="form-section">
+        <h3>Main Background Points (7 Required)</h3>
+        
+        <label for="bullet1">1. Personal Background</label>
+        <textarea id="bullet1" name="bullet1" rows="2" placeholder="Personal background" required>Born and raised in Charlotte, NC. Enjoy hiking and photography in my free time.</textarea>
+
+        <label for="bullet2">2. Professional Background</label>
+        <textarea id="bullet2" name="bullet2" rows="2" placeholder="Professional background" required>Interned at a local tech startup, working on web development projects.</textarea>
+
+        <label for="bullet3">3. Academic Background</label>
+        <textarea id="bullet3" name="bullet3" rows="2" placeholder="Academic background" required>Currently pursuing B.S. in Computer Science at UNC Charlotte, expected graduation May 2026.</textarea>
+
+        <label for="bullet4">4. Background in Web Development</label>
+        <textarea id="bullet4" name="bullet4" rows="2" placeholder="Web development background" required>Experienced in HTML, CSS, JavaScript, and React. Built several responsive web applications.</textarea>
+
+        <label for="bullet5">5. Primary Computer Platform</label>
+        <textarea id="bullet5" name="bullet5" rows="2" placeholder="Primary platform" required>macOS for development, familiar with Windows and Linux environments.</textarea>
+
+        <label for="bullet6">6. Courses Currently Taking</label>
+        <textarea id="bullet6" name="bullet6" rows="2" placeholder="Current courses" required>Software Engineering, Database Systems, Web Development, and AI Fundamentals.</textarea>
+
+        <label for="bullet7">7. Future Goals/Plans</label>
+        <textarea id="bullet7" name="bullet7" rows="2" placeholder="Future plans" required>Aspiring to work as a software engineer at a leading tech company and eventually start my own tech venture.</textarea>
+      </div>
+
+      <!-- Courses Section -->
+      <div class="form-section">
+        <h3>Courses</h3>
+        <div id="coursesContainer">
+          <div class="course-entry">
+            <div class="course-title">Course 1</div>
+            <label>Department Code</label>
+            <input type="text" name="courseDept[]" value="ITSC" placeholder="e.g., ITSC" required>
+            
+            <label>Course Number</label>
+            <input type="text" name="courseNum[]" value="3155" placeholder="e.g., 3155" required>
+            
+            <label>Course Name</label>
+            <input type="text" name="courseName[]" value="Software Engineering" placeholder="Course name" required>
+            
+            <label>Reason for Taking</label>
+            <textarea name="courseReason[]" rows="2" placeholder="Why are you taking this course?" required>To learn industry-standard software development practices and agile methodologies.</textarea>
+          </div>
+        </div>
+        <button type="button" class="add-course" onclick="addCourse()">+ Add Another Course</button>
+      </div>
+
+      <!-- Quote -->
+      <div class="form-section">
+        <h3>Favorite Quote</h3>
+        
+        <label for="quote">Quote</label>
+        <textarea id="quote" name="quote" rows="2" placeholder="Enter your favorite quote" required>"The best way to predict the future is to create it."</textarea>
+
+        <label for="quoteAuthor">Quote Author</label>
+        <input type="text" id="quoteAuthor" name="quoteAuthor" value="Peter Drucker" placeholder="Author name" required>
+      </div>
+
+      <!-- Optional Fields -->
+      <div class="form-section">
+        <h3>Additional Information</h3>
+        
+        <label for="funnyThing" class="optional">Funny Thing</label>
+        <textarea id="funnyThing" name="funnyThing" rows="2" placeholder="Share something funny (optional)">I once debugged code for 2 hours only to realize I forgot to save the file.</textarea>
+
+        <label for="shareItem" class="optional">Something I Would Like to Share</label>
+        <textarea id="shareItem" name="shareItem" rows="2" placeholder="Share something interesting (optional)">I'm currently learning Japanese and hope to study abroad in Tokyo next year.</textarea>
+      </div>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button" id="clearBtn">Clear</button>
+      </div>
+    </form>
+
+    <div id="result" class="hidden"></div>
+  </main>
+  <div data-include="components/footer.html"></div>  
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="scripts/introduction.js"></script>
+</body>
+</html>
