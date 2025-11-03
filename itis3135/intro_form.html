@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Introduction Form | Addison Amadi</title>
   <link rel="stylesheet" href="styles/default.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
   <style>
     /* Form-specific styles only */
     .form-container {
@@ -169,6 +170,26 @@
     .form-intro {
       text-align: center;
     }
+
+    /* Syntax highlighting styles */
+    #result pre {
+      background: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      overflow-x: auto;
+      text-align: left;
+    }
+
+    #result code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    #result section {
+      margin: 20px 0;
+    }
   </style>
 </head>
 <body>
@@ -198,7 +219,7 @@
 
       <!-- Acknowledgment -->
       <div class="form-section">
-        <h3>Acknowledgment</h3>
+        <h3 class="section-title">Acknowledgment</h3>
         
         <label for="ackStatement">Acknowledgment Statement</label>
         <textarea id="ackStatement" name="ackStatement" rows="2" required>I, Addison Amadi, acknowledge that this is my own work and represents my personal introduction.</textarea>
@@ -209,7 +230,7 @@
 
       <!-- Mascot -->
       <div class="form-section">
-        <h3>Mascot</h3>
+        <h3 class="section-title">Mascot</h3>
         
         <label for="mascotAdj">Mascot Adjective</label>
         <input type="text" id="mascotAdj" name="mascotAdj" value="Agile" placeholder="Enter an adjective" required>
@@ -223,7 +244,7 @@
 
       <!-- Picture -->
       <div class="form-section">
-        <h3>Picture</h3>
+        <h3 class="section-title">Picture</h3>
         
         <img id="previewImg" class="preview-img" src="images/addison.jpg" alt="Preview">
         
@@ -236,7 +257,7 @@
 
       <!-- Personal Statement -->
       <div class="form-section">
-        <h3>Personal Statement</h3>
+        <h3 class="section-title">Personal Statement</h3>
         
         <label for="personalStatement">Personal Statement</label>
         <textarea id="personalStatement" name="personalStatement" rows="4" placeholder="Write your personal statement" required>I'm a Computer Science student at UNC Charlotte with a passion for data science and artificial intelligence. I love solving complex problems and building innovative solutions.</textarea>
@@ -244,7 +265,7 @@
 
       <!-- 7 Main Bullets -->
       <div class="form-section">
-        <h3>Main Background Points (7 Required)</h3>
+        <h3 class="section-title">Main Background Points (7 Required)</h3>
         
         <label for="bullet1">1. Personal Background</label>
         <textarea id="bullet1" name="bullet1" rows="2" placeholder="Personal background" required>Born and raised in Charlotte, NC. Enjoy hiking and photography in my free time.</textarea>
@@ -270,7 +291,7 @@
 
       <!-- Courses Section -->
       <div class="form-section">
-        <h3>Courses</h3>
+        <h3 class="section-title">Courses</h3>
         <div id="coursesContainer">
           <div class="course-entry">
             <div class="course-title">Course 1</div>
@@ -292,7 +313,7 @@
 
       <!-- Quote -->
       <div class="form-section">
-        <h3>Favorite Quote</h3>
+        <h3 class="section-title">Favorite Quote</h3>
         
         <label for="quote">Quote</label>
         <textarea id="quote" name="quote" rows="2" placeholder="Enter your favorite quote" required>"The best way to predict the future is to create it."</textarea>
@@ -303,7 +324,7 @@
 
       <!-- Optional Fields -->
       <div class="form-section">
-        <h3>Additional Information</h3>
+        <h3 class="section-title">Additional Information</h3>
         
         <label for="funnyThing" class="optional">Funny Thing</label>
         <textarea id="funnyThing" name="funnyThing" rows="2" placeholder="Share something funny (optional)">I once debugged code for 2 hours only to realize I forgot to save the file.</textarea>
@@ -317,14 +338,20 @@
         <button type="submit" id="submitBtn">Submit</button>
         <button type="reset">Reset</button>
         <button type="button" id="clearBtn">Clear</button>
+        <button type="button" id="generateJSONBtn" onclick="generateJSON()">Generate JSON</button>
+        <button type="button" id="generateHTMLBtn" onclick="generateHTML()">Generate HTML</button>
       </div>
     </form>
 
     <div id="result" class="hidden"></div>
   </main>
   <div data-include="components/footer.html"></div>  
-    <script src="scripts/HTMLInclude.min.js"></script>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
   <script src="scripts/introduction.js"></script>
+  <script src="scripts/generate_html.js"></script>
+  <script src="scripts/generate_json.js"></script>
+
 </body>
 </html>
