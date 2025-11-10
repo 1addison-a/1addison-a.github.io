@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoption Information - PetConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🐾 PetConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="available-pets.html">Available Pets</a></li>
+                    <li><a href="adoption-info.html" class="active">Adoption Info</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="adoption-steps">
+            <div class="container">
+                <h2>Adoption Process</h2>
+                <p class="section-subtitle">Follow these simple steps to welcome a new pet into your family</p>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <h3 class="step-title">Step 1: Browse Available Pets</h3>
+                        <p>Visit our <a href="available-pets.html">Available Pets</a> page to explore all the wonderful animals looking for homes. Use our filters to find pets that match your preferences for type, age, and breed.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3 class="step-title">Step 2: Submit an Application</h3>
+                        <p>Once you've found a pet you're interested in, fill out our adoption application form. This helps us understand your living situation, experience with pets, and what you're looking for in a companion.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3 class="step-title">Step 3: Meet and Greet</h3>
+                        <p>After your application is reviewed and approved, we'll schedule a meet-and-greet with your potential new pet. This gives you time to interact and ensure it's a good match for both you and the animal.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3 class="step-title">Step 4: Home Visit</h3>
+                        <p>Our team will conduct a brief home visit to ensure your living space is safe and suitable for your new pet. This is also a great opportunity to ask any questions you may have.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3 class="step-title">Step 5: Finalize Adoption</h3>
+                        <p>Complete the adoption paperwork and pay the adoption fee. All pets come vaccinated, spayed/neutered, and microchipped. We'll provide you with medical records and care instructions.</p>
+                    </div>
+
+                    <div class="step">
+                        <h3 class="step-title">Step 6: Welcome Home!</h3>
+                        <p>Take your new family member home! We provide ongoing support and resources to help you and your pet adjust to life together. Don't hesitate to reach out if you need assistance.</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <h3>Required Documents</h3>
+                    <p>Please have the following documents ready:</p>
+                    <ul style="text-align: left; max-width: 600px; margin: 1rem auto; line-height: 2;">
+                        <li>Valid photo ID</li>
+                        <li>Proof of residence (utility bill or lease agreement)</li>
+                        <li>Veterinary references (if you've had pets before)</li>
+                        <li>Landlord approval (if renting)</li>
+                    </ul>
+
+                    <h3 style="margin-top: 2rem;">Adoption Fees</h3>
+                    <p>Our adoption fees help cover the cost of veterinary care, food, and shelter for our animals:</p>
+                    <ul style="text-align: left; max-width: 600px; margin: 1rem auto; line-height: 2;">
+                        <li>Dogs: $200</li>
+                        <li>Cats: $150</li>
+                        <li>Senior pets (8+ years): $100</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find answers to common questions about pet adoption</p>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>How long does the adoption process take?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            The adoption process typically takes 1-2 weeks from application submission to taking your pet home. This timeframe allows us to properly review applications, conduct meet-and-greets, and complete home visits to ensure the best match.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can I adopt if I rent my home?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! Many renters successfully adopt pets. You'll need to provide written permission from your landlord confirming that pets are allowed. We recommend checking your lease agreement for any breed or size restrictions before applying.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Are your pets vaccinated and spayed/neutered?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! All of our pets are up-to-date on vaccinations, spayed or neutered, and microchipped before adoption. We provide complete medical records and information about any ongoing care needs.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What if the adoption doesn't work out?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We understand that sometimes things don't work out as planned. If you need to return a pet within the first 30 days, we'll work with you to find a solution. Our goal is always the well-being of both the pet and the adopter.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do you offer trial periods?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We offer a 2-week trial period for all adoptions. This gives you and your new pet time to adjust and ensures the placement is a good fit. During this time, we're available to answer questions and provide support.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Can I meet multiple pets before deciding?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Absolutely! We encourage you to meet several pets to find the right match. You can schedule visits with multiple animals during the same visit or come back for additional meet-and-greets.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>Do you have pets suitable for families with children?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Yes! Many of our pets are great with children. We carefully evaluate each animal's temperament and can recommend pets that would be perfect for families. During the adoption process, we consider your family composition to ensure a good match.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleFAQ(this)">
+                            <span>What kind of support do you provide after adoption?</span>
+                            <span class="faq-toggle">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We provide lifetime support for all our adopters! This includes access to training resources, behavioral advice, and ongoing guidance. You can always reach out with questions or concerns, and we're here to help you and your pet thrive together.
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem;">
+                    <p>Have more questions? We're here to help!</p>
+                    <a href="contact.html" class="btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">PetConnect</h3>
+                    <p>Connecting loving families with pets in need since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="available-pets.html">Available Pets</a></li>
+                        <li><a href="adoption-info.html">Adoption Process</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p>Charlotte Animal Rescue</p>
+                    <p>Email: sarah@charlotterescue.org</p>
+                    <p>Phone: (704) 555-8723</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

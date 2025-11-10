@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Pets - PetConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🐾 PetConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="available-pets.html" class="active">Available Pets</a></li>
+                    <li><a href="adoption-info.html">Adoption Info</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="pet-gallery">
+            <div class="container">
+                <h2>Available Pets</h2>
+                <p class="section-subtitle">Find your perfect companion from our loving animals waiting for a home</p>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="typeFilter">Type:</label>
+                        <select id="typeFilter" onchange="filterPets()">
+                            <option value="all">All Types</option>
+                            <option value="dog">Dogs</option>
+                            <option value="cat">Cats</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="ageFilter">Age:</label>
+                        <select id="ageFilter" onchange="filterPets()">
+                            <option value="all">All Ages</option>
+                            <option value="young">Young (0-2 years)</option>
+                            <option value="adult">Adult (3-7 years)</option>
+                            <option value="senior">Senior (8+ years)</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="breedFilter">Breed:</label>
+                        <select id="breedFilter" onchange="filterPets()">
+                            <option value="all">All Breeds</option>
+                            <option value="golden-retriever">Golden Retriever</option>
+                            <option value="labrador">Labrador</option>
+                            <option value="beagle">Beagle</option>
+                            <option value="german-shepherd">German Shepherd</option>
+                            <option value="poodle">Poodle</option>
+                            <option value="tabby">Tabby</option>
+                            <option value="siamese">Siamese</option>
+                            <option value="maine-coon">Maine Coon</option>
+                            <option value="persian">Persian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="pets-grid">
+                    <div class="pet-card" data-type="dog" data-age="adult" data-breed="golden-retriever">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800" alt="Max">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Max</h3>
+                            <p><strong>Breed:</strong> Golden Retriever</p>
+                            <p><strong>Age:</strong> 3 years</p>
+                            <p>Friendly and energetic, great with kids!</p>
+                            <button class="btn-secondary" onclick="showPetDetails('max')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="cat" data-age="young" data-breed="tabby">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800" alt="Luna">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Luna</h3>
+                            <p><strong>Breed:</strong> Tabby</p>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p>Gentle and affectionate, loves to cuddle.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('luna')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="dog" data-age="adult" data-breed="beagle">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800" alt="Buddy">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Buddy</h3>
+                            <p><strong>Breed:</strong> Beagle</p>
+                            <p><strong>Age:</strong> 4 years</p>
+                            <p>Playful and loyal, loves adventures.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('buddy')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="dog" data-age="young" data-breed="labrador">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=800" alt="Bella">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Bella</h3>
+                            <p><strong>Breed:</strong> Labrador</p>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p>Sweet and gentle, perfect for families.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('bella')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="cat" data-age="young" data-breed="siamese">
+                        <img src="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?w=800" alt="Oliver">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Oliver</h3>
+                            <p><strong>Breed:</strong> Siamese</p>
+                            <p><strong>Age:</strong> 1 year</p>
+                            <p>Playful kitten with beautiful blue eyes.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('oliver')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="dog" data-age="adult" data-breed="german-shepherd">
+                        <img src="https://images.unsplash.com/photo-1568572933382-74d440642117?w=800" alt="Charlie">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Charlie</h3>
+                            <p><strong>Breed:</strong> German Shepherd</p>
+                            <p><strong>Age:</strong> 5 years</p>
+                            <p>Loyal and intelligent, well-trained.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('charlie')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="cat" data-age="adult" data-breed="maine-coon">
+                        <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800" alt="Milo">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Milo</h3>
+                            <p><strong>Breed:</strong> Maine Coon</p>
+                            <p><strong>Age:</strong> 3 years</p>
+                            <p>Majestic and gentle, loves attention.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('milo')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="dog" data-age="adult" data-breed="poodle">
+                        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=800" alt="Daisy">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Daisy</h3>
+                            <p><strong>Breed:</strong> Poodle</p>
+                            <p><strong>Age:</strong> 4 years</p>
+                            <p>Elegant and cheerful, hypoallergenic.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('daisy')">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="pet-card" data-type="cat" data-age="young" data-breed="persian">
+                        <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=800" alt="Whiskers">
+                        <div class="pet-card-content">
+                            <h3 class="pet-name">Whiskers</h3>
+                            <p><strong>Breed:</strong> Persian</p>
+                            <p><strong>Age:</strong> 2 years</p>
+                            <p>Fluffy and calm, loves lounging.</p>
+                            <button class="btn-secondary" onclick="showPetDetails('whiskers')">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pet Details Modal -->
+    <div id="petModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalPetImage" src="" alt="Pet Image">
+            <div class="modal-body">
+                <h2 id="modalPetName"></h2>
+                <p><strong>Type:</strong> <span id="modalPetType"></span></p>
+                <p><strong>Breed:</strong> <span id="modalPetBreed"></span></p>
+                <p><strong>Age:</strong> <span id="modalPetAge"></span></p>
+                <p id="modalPetDescription"></p>
+                <a href="contact.html" class="btn-primary">Inquire About Adoption</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">PetConnect</h3>
+                    <p>Connecting loving families with pets in need since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="available-pets.html">Available Pets</a></li>
+                        <li><a href="adoption-info.html">Adoption Process</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p>Charlotte Animal Rescue</p>
+                    <p>Email: sarah@charlotterescue.org</p>
+                    <p>Phone: (704) 555-8723</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

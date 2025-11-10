@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetConnect - Find Your Perfect Pet Match</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🐾 PetConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="available-pets.html">Available Pets</a></li>
+                    <li><a href="adoption-info.html">Adoption Info</a></li>
+                    <li><a href="success-stories.html">Success Stories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Find Your Perfect Companion</h2>
+                <p>Give a loving home to a pet in need. Browse our adoptable animals today!</p>
+                <a href="available-pets.html" class="btn-primary">Adopt Now</a>
+            </div>
+        </section>
+
+        <section class="featured-pets">
+            <div class="container">
+                <h2>Featured Pets</h2>
+                <p class="section-subtitle">Meet some of our wonderful animals waiting for their forever homes</p>
+                
+                <div class="slideshow-container">
+                    <div class="slide fade">
+                        <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800" alt="Max the Golden Retriever">
+                        <div class="slide-info">
+                            <h3>Max</h3>
+                            <p>Golden Retriever • 3 years old • Friendly and energetic</p>
+                            <a href="available-pets.html" class="btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="slide fade">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800" alt="Luna the Tabby Cat">
+                        <div class="slide-info">
+                            <h3>Luna</h3>
+                            <p>Tabby Cat • 2 years old • Gentle and affectionate</p>
+                            <a href="available-pets.html" class="btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <div class="slide fade">
+                        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=800" alt="Buddy the Beagle">
+                        <div class="slide-info">
+                            <h3>Buddy</h3>
+                            <p>Beagle • 4 years old • Playful and loyal</p>
+                            <a href="available-pets.html" class="btn-secondary">Learn More</a>
+                        </div>
+                    </div>
+
+                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                </div>
+
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-adopt">
+            <div class="container">
+                <h2>Why Adopt?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">❤️</div>
+                        <h3 class="benefit-title">Save a Life</h3>
+                        <p>Give a homeless animal a second chance at happiness and love.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">💰</div>
+                        <h3 class="benefit-title">Affordable</h3>
+                        <p>Adoption fees are much lower than buying from breeders or pet stores.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏥</div>
+                        <h3 class="benefit-title">Health Checked</h3>
+                        <p>All our pets are vaccinated, spayed/neutered, and health screened.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🤝</div>
+                        <h3 class="benefit-title">Support Included</h3>
+                        <p>We provide ongoing support and resources for new pet parents.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Find Your New Best Friend?</h2>
+                <p>Browse our available pets and start your adoption journey today!</p>
+                <a href="available-pets.html" class="btn-primary">View Available Pets</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>PetConnect</h3>
+                    <p>Connecting loving families with pets in need since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="available-pets.html">Available Pets</a></li>
+                        <li><a href="adoption-info.html">Adoption Process</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>Charlotte Animal Rescue</p>
+                    <p>Email: sarah@charlotterescue.org</p>
+                    <p>Phone: (704) 555-8723</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

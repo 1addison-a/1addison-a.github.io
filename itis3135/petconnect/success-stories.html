@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success Stories - PetConnect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>🐾 PetConnect</h1>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="available-pets.html">Available Pets</a></li>
+                    <li><a href="adoption-info.html">Adoption Info</a></li>
+                    <li><a href="success-stories.html" class="active">Success Stories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section style="padding: 60px 20px; background-color: #f8f9fa;">
+            <div class="container">
+                <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 0.5rem; color: #2c5f7c;">Success Stories</h2>
+                <p class="section-subtitle">Heartwarming tales of pets who found their forever homes</p>
+
+                <div class="stories-grid">
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800" alt="Happy family with dog">
+                        <div class="story-content">
+                            <h3 class="story-title">Max & The Johnson Family</h3>
+                            <p class="adopter-name">- Emily Johnson</p>
+                            <p>"Adopting Max was the best decision we ever made! He's brought so much joy and energy into our home. Our kids absolutely adore him, and he's become an integral part of our family. Thank you PetConnect for helping us find our perfect match!"</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?w=800" alt="Woman with cat">
+                        <div class="story-content">
+                            <h3 class="story-title">Luna's New Beginning</h3>
+                            <p class="adopter-name">- Sarah Martinez</p>
+                            <p>"Luna has transformed my life! As someone living alone, I was looking for companionship, and she's been the perfect cuddle buddy. She greets me every day when I come home from work. I couldn't imagine life without her now. Adoption truly saves lives!"</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?w=800" alt="Man playing with dog">
+                        <div class="story-content">
+                            <h3 class="story-title">Buddy's Second Chance</h3>
+                            <p class="adopter-name">- Michael Chen</p>
+                            <p>"When I met Buddy, I knew he was the one. He had been in the shelter for months, but from day one at home, he's been nothing but loving and loyal. We go on adventures together every weekend. He's helped me stay active and brought so much happiness into my life."</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=800" alt="Senior couple with cat">
+                        <div class="story-content">
+                            <h3 class="story-title">Whiskers Finds Comfort</h3>
+                            <p class="adopter-name">- Robert & Linda Davis</p>
+                            <p>"As empty nesters, we were looking for a calm companion. Whiskers is perfect for us! He loves to lounge and purr, and taking care of him has given us a new sense of purpose. The PetConnect team was wonderful in helping us find exactly what we needed."</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?w=800" alt="Family with poodle">
+                        <div class="story-content">
+                            <h3 class="story-title">Daisy's Forever Home</h3>
+                            <p class="adopter-name">- Jessica Thompson</p>
+                            <p>"Our daughter has allergies, so we needed a hypoallergenic dog. Daisy the Poodle has been amazing! She's gentle, playful, and doesn't trigger any allergies. The adoption process was smooth, and the staff really cared about finding the right fit for our family."</p>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <img src="https://images.unsplash.com/photo-1573865526739-10c1d3a1e83e?w=800" alt="Young man with cat">
+                        <div class="story-content">
+                            <h3 class="story-title">Oliver's Fresh Start</h3>
+                            <p class="adopter-name">- David Park</p>
+                            <p>"I adopted Oliver as a kitten, and watching him grow has been incredible. He's curious, playful, and has such a unique personality. Adopting him was one of the best decisions I've made. The ongoing support from PetConnect has been invaluable as a first-time pet owner."</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 3rem; background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h3 style="color: #2c5f7c; margin-bottom: 1rem;">Have Your Own Success Story?</h3>
+                    <p style="margin-bottom: 2rem;">We'd love to hear about your adoption experience! Share your story and inspire others to adopt.</p>
+                    <button class="btn-primary" onclick="openStoryModal()">Submit Your Story</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Story Submission Modal -->
+    <div id="storyModal" class="modal">
+        <div class="modal-content" style="max-width: 600px;">
+            <span class="close" onclick="closeStoryModal()">&times;</span>
+            <div class="modal-body">
+                <h2 style="color: #2c5f7c; margin-bottom: 1.5rem;">Share Your Success Story</h2>
+                
+                <div id="storyConfirmation" class="confirmation-message">
+                    Thank you for sharing your story! We'll review it and may feature it on our website.
+                </div>
+
+                <form id="storyForm" onsubmit="return submitStory(event)">
+                    <div class="form-group">
+                        <label for="storyPetName">Pet's Name *</label>
+                        <input type="text" id="storyPetName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storyAdopterName">Your Name *</label>
+                        <input type="text" id="storyAdopterName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storyEmail">Your Email *</label>
+                        <input type="email" id="storyEmail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storyText">Your Story *</label>
+                        <textarea id="storyText" placeholder="Tell us about your adoption experience and how your pet has enriched your life..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="storyPhoto">Upload Photo (Optional)</label>
+                        <input type="file" id="storyPhoto" accept="image/*">
+                        <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Share a photo of you and your pet together!</p>
+                    </div>
+
+                    <button type="submit" class="btn-primary" style="width: 100%;">Submit Story</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">PetConnect</h3>
+                    <p>Connecting loving families with pets in need since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="available-pets.html">Available Pets</a></li>
+                        <li><a href="adoption-info.html">Adoption Process</a></li>
+                        <li><a href="success-stories.html">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p>Charlotte Animal Rescue</p>
+                    <p>Email: sarah@charlotterescue.org</p>
+                    <p>Phone: (704) 555-8723</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 PetConnect. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>
